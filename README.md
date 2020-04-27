@@ -1,29 +1,36 @@
 # Where is my access point?
+
 A prototype to get GPS information from Cisco WLC and visualise the Cisco access point location on Google Maps
 
-
 ## Why?
+
 When access point is located in for example moving vehicle, it can be useful to visualise the curren location on map. Google Maps is only one use case: when implemeting programmability in your network and getting information out of your devices, you can utilise that in any 3rd party solution utilising GPS information.
 
 ## Features
+
 - Get GPS information from WLC using Netmiko
 - Parse CLI response for GPS information
 - Create GUI with Google Maps APIs
 
 ## Technologies & Frameworks Used
-This is Cisco prototype!
 
-Cisco Hardware
+This is Cisco Sample Code!
+
+**Cisco Products**
 - Cisco 5520 WLC
 - Cisco Aironet 1572 access point
 - AIR-ANT-GPS-1 GPS antenna for 1572
 
-Tools & Frameworks:
+**Third-Party Products & Services:**
+- Google Maps APIs
+
+**Tools & Frameworks:**
 - Python3
 - Netmiko
 - Flask
 
 ## Usage
+
 1. Get your Google Maps API token and insert it in index.html
 ```html
 <script async defer src="ADD YOUR GOOGLE MAPS API SOURCE AND KEY HERE" type="text/javascript">
@@ -48,8 +55,11 @@ host = "ip" #ip address of the WLC
 ```
 
 ## Authors
-- Juulia Santala
+
+- Juulia Santala <jusantal@cisco.com>
 - Jonne Tuomela
 
 ## License
-This project is licensed to you under the terms of the Cisco Sample Code License.
+
+This project is licensed to you under the terms of the [Cisco Sample
+Code License](./LICENSE).
