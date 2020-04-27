@@ -1,0 +1,41 @@
+/* Application to Visualise Access point on a map
+
+Created By Juulia Santala, 2020, Cisco Systems
+PROTOTYPE and POV, not ready for production!
+
+*/
+
+
+body {
+	padding: 20px;
+	margin: 0px;
+	background-color: #ffffff;
+
+}
+#map {
+	height: 800px;  
+	width: 100%;  
+}
+
+main {
+	font-family: Arial, Verdana;
+	padding: 0px;
+	width:80%;
+	border:1px solid #ECEBEB;
+	border-top: 0px;
+}
+
+header {
+	color: #ffffff;
+	font-family: Arial, Verdana;
+	background-color: #384967;
+	font-size: 20px;
+	width: 80%;
+	border-top: 5px solid #c69214;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+	text-align: center;
+	position: relative; right: 1px;
+}
+

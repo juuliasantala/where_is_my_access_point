@@ -1,0 +1,67 @@
+<!--
+Application to Visualise Access point on a map
+
+Created by Juulia Santala and Jonne Tuomela, Cisco Systems, 2020
+
+Prototype, not to be used in production environment!
+ -->
+
+<!doctype html>
+<html>
+<head>
+<title>Access points on a map</title>
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css') }}">
+
+
+
+</head>
+<body>
+<center>
+<header>Access points on a map</header>
+<br/><br/>
+<main>
+<div id="map"></div>
+
+
+
+<script>
+	var gps = JSON.parse('{{gps | tojson | safe}}');
+
+	// Initialize and add the map
+	function initMap() {
+		var access_point = {lat: parseFloat(gps[0]['latitude']), lng: parseFloat(gps[0]['longitude'])};
+		//creates and centers the map view on the coordinates in the above line.
+
+		var mapOptions =
+		{
+			zoom: 12,
+			center: access_point,
+			mapTypeId: 'satellite'
+		}
+
+		var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+		for (var i=0; i<gps.length; i++){
+			var access_point = {lat: parseFloat(gps[i]['latitude']), lng: parseFloat(gps[i]['longitude'])};
+			var marker = new google.maps.Marker(
+				{
+					position: access_point,
+					map: map,
+					title: " Lat " + gps[i]['latitude'] + " Long "+ gps[i]['longitude'],
+					label:gps[i]['name']
+				});
+			}
+		}
+
+</script>
+
+<script async defer src="ADD YOUR GOOGLE MAPS API SOURCE AND KEY HERE" type="text/javascript">
+//Google Maps API source and API key
+
+</script>
+</main>
+</center>
+
+</body>
+</html>
