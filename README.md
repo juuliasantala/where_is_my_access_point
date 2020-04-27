@@ -2,6 +2,8 @@
 
 A prototype to get GPS information from Cisco WLC and visualise the Cisco access point location on Google Maps
 
+![Screenshot](./gui_example.png)
+
 ## Why?
 
 When access point is located in for example moving vehicle, it can be useful to visualise the curren location on map. Google Maps is only one use case: when implemeting programmability in your network and getting information out of your devices, you can utilise that in any 3rd party solution utilising GPS information.
